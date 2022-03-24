@@ -1,6 +1,6 @@
 type OptionalFieldsOnly<T> = {
-  [K in keyof T as (T[K] extends Required<T>[K] ? never : K)]: T[K] extends object | undefined 
-      ? OptionalFieldsOnly<T[K]> 
+  [K in keyof T as (T[K] extends Required<T>[K] ? never : K)]: T[K] extends object | undefined
+      ? OptionalFieldsOnly<T[K]>
       : T[K];
 }
 
@@ -50,6 +50,8 @@ type RequireSomeOfFields<T, P extends string> = T extends object
   }>
 ) : T;
 // DeepRequired<T, Split<ShiftUnion<P>[0], ".">>;
+
+export default RequireSomeOfFields;
 
 interface Rec {
   key1?: string;

@@ -1,0 +1,8 @@
+{
+  "name": "insane-typescript-types",
+  "version": "0.1.0",
+  "types": "types/index.d.ts",
+  "repository": "git@github.com:romgerman/insane-typescript-types.git",
+  "author": "romgerman",
+  "license": "MIT"
+}
