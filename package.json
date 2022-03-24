@@ -1,0 +1,15 @@
+{
+  "name": "insane-typescript-types",
+  "version": "0.1.0",
+  "types": "types/index.d.ts",
+  "repository": "git@github.com:romgerman/insane-typescript-types.git",
+  "author": "romgerman",
+  "license": "MIT",
+  "scripts": {
+    "dtslint": "dtslint types"
+  },
+  "devDependencies": {
+    "@definitelytyped/dtslint": "^0.0.111",
+    "typescript": "^4.6.2"
+  }
+}
