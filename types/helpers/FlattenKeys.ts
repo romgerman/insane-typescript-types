@@ -1,5 +1,5 @@
 /**
- * Collect all keys as union, with any nested objects
+ * Collect all keys as union. Works with nested objects
  *
  * @template T Object to collect keys from
  */
