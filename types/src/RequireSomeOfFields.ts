@@ -51,47 +51,11 @@ type RequireSomeOfFields<T, P extends string> = T extends object
 ) : T;
 // DeepRequired<T, Split<ShiftUnion<P>[0], ".">>;
 
+export { OptionalFieldsOnly };
+
 export default RequireSomeOfFields;
 
-interface Rec {
-  key1?: string;
-  key2?: string;
-  key3: string;
-  nestedReq: {
-      kk1: string;
-  }
-  nested?: {
-      nkey1?: string;
-      nkey2: string;
 
-      doubleNested?: {
-          nnkey: string;
-          nnkek?: string;
-      }
-  }
-}
-
-type OptionalRec = OptionalFieldsOnly<Rec>;
-
-const data: OptionalRec = {
-  key1: 'poop',
-  key2: 'moop',
-  key3: '#ERROR',
-  keyNonExist: '#ERROR',
-  nestedReq: {
-      kk1: '#ERROR',
-  },
-  nested: {
-      nkey1: 'peep',
-      nkey2: '#ERROR',
-      keyNonExist: '#ERROR',
-      doubleNested: {
-          nnkey: 'boop',
-          nnkek: '#ERROR'
-          keyNonExist: '#ERROR',
-      }
-  }
-};
 
 type SomeRequired = RequireSomeOfFields<OptionalRec, "key1" | "key2" | "nested" | "nested.nkey1">
 
