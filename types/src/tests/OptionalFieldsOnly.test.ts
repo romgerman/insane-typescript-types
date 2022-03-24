@@ -1,4 +1,4 @@
-import { OptionalFieldsOnly } from '../RequireSomeOfFields';
+import { OptionalFieldsOnly } from '@/RequireSomeOfFields';
 
 interface Rec1 {
   key1: string;
