@@ -1,3 +1,5 @@
+// Minimum TypeScript Version: 4.1
+
 // prefix keys of object with PREFIX
 export type PrefixKeys<T extends object, PREFIX extends string> = {
   [K in keyof T as `${PREFIX}.${string & K}`]: T[K]
@@ -40,7 +42,7 @@ interface Test {
 }
 
 // test array
-const keys: GetKeysOfObjectAsUnion<Test>[] = [
+const keys: Array<GetKeysOfObjectAsUnion<Test>> = [
   'name',
   'address',
   'nonExists', // error
