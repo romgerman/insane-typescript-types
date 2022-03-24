@@ -1,4 +1,4 @@
-import GetKeysOfObjectAsUnion from '../GetKeysOfObjectAsUnion';
+import GetKeysOfObjectAsUnion from '@/GetKeysOfObjectAsUnion';
 
 interface Test {
   id: number;

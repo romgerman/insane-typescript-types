@@ -1,14 +1,10 @@
-import { OptionalFieldsOnly } from '../RequireSomeOfFields';
+import { OptionalFieldsOnly } from '@/RequireSomeOfFields';
 
 interface Rec1 {
   key1: string;
   key2?: string;
   key3?: string;
 }
-
-type Expand<T> = T extends object
-  ? T extends infer O ? { [K in keyof O]: Expand<O[K]> } : never
-  : T;
 
 const test1: OptionalFieldsOnly<Rec1> = {
   key1: 'test', // $ExpectError
