@@ -1,7 +1,7 @@
 /**
  * Recursively expand type to primitive types.
  *
- * @typeParam T - Type to expand
+ * @template T Type to expand
  *
  * {@link https://stackoverflow.com/a/57683652/11949901 Stackoverflow reference}
  */
