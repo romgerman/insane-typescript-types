@@ -1,5 +1,5 @@
 // Minimum TypeScript Version: 4.1
-import { FlattenKeys } from '@helpers/FlattenKeys';
+import FlattenKeys from '@helpers/FlattenKeys';
 import { PrefixKeysDeep } from '@helpers/PrefixKeys';
 
 /**

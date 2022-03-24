@@ -3,6 +3,8 @@
  *
  * @template T Object to collect keys from
  */
-export type FlattenKeys<T extends object> = {
+type FlattenKeys<T extends object> = {
   [K in keyof T]: T[K] extends object ? K | FlattenKeys<T[K]> : K
 }[keyof T];
+
+export default FlattenKeys;
