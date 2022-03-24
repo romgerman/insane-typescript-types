@@ -54,15 +54,3 @@ type RequireSomeOfFields<T, P extends string> = T extends object
 export { OptionalFieldsOnly };
 
 export default RequireSomeOfFields;
-
-
-
-type SomeRequired = RequireSomeOfFields<OptionalRec, "key1" | "key2" | "nested" | "nested.nkey1">
-
-const data2: SomeRequired = {
-  key1: "",
-  key2: "",
-  nested: {
-    nkey1: "",
-  }
-};
