@@ -6,10 +6,12 @@
   "author": "romgerman",
   "license": "MIT",
   "scripts": {
-    "dtslint": "dtslint types"
+    "dtslint": "dtslint types",
+    "dtslint:watch": "nodemon -e js,ts --watch types --exec \"yarn dtslint\""
   },
   "devDependencies": {
     "@definitelytyped/dtslint": "^0.0.111",
+    "nodemon": "^2.0.15",
     "typescript": "^4.6.2"
   }
 }
