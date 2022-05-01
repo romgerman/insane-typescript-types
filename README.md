@@ -1,0 +1,1 @@
+[![Test types](https://github.com/romgerman/insane-typescript-types/actions/workflows/test.yaml/badge.svg?branch=main)](https://github.com/romgerman/insane-typescript-types/actions/workflows/test.yaml)
