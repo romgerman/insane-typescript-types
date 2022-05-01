@@ -1,4 +1,4 @@
-import { OptionalFieldsOnly } from '@/RequireSomeOfFields';
+import OptionalFields from "@/OptionalFields";
 
 interface Rec1 {
   key1: string;
@@ -6,7 +6,7 @@ interface Rec1 {
   key3?: string;
 }
 
-const test1: OptionalFieldsOnly<Rec1> = {
+const test1: OptionalFields<Rec1> = {
   key1: 'test', // $ExpectError
   key2: 'test',
   key3: 'test',
@@ -20,7 +20,7 @@ interface Rec2 {
   }
 }
 
-const test2: OptionalFieldsOnly<Rec2> = {
+const test2: OptionalFields<Rec2> = {
   nested: {
     nkey1: 'test', // $ExpectError
     nkey2: 'test',
@@ -35,7 +35,7 @@ interface Rec3 {
   }
 }
 
-const test3: OptionalFieldsOnly<Rec3> = {
+const test3: OptionalFields<Rec3> = {
   nested: {} // TODO $ExpectError
 }
 
@@ -50,7 +50,7 @@ interface Rec4 {
   }
 }
 
-const test4: OptionalFieldsOnly<Rec4> = {
+const test4: OptionalFields<Rec4> = {
   nested: {
     doubleNested: {
       nnkey: 'test', // $ExpectError

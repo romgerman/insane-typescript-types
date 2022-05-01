@@ -1,9 +1,9 @@
 // Minimum TypeScript Version: 4.1
 
 import GetKeysOfObjectAsUnion from './src/GetKeysOfObjectAsUnion';
-import RequireSomeOfFields from './src/RequireSomeOfFields';
+import RequireFields from './src/RequireFields';
 
 export {
   GetKeysOfObjectAsUnion,
-  RequireSomeOfFields
+  RequireFields
 };
